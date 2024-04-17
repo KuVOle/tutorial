@@ -1,8 +1,8 @@
-//-------------------------------------------------------------------------------------------------------------------------
-// if you need setup default level logging, you can use 'process.env.PINO_LOG_LEVEL'. 'info' - from dev, 'warn' - from prod
-// #redact - array from hidden field in object
-// if you need desktop log we can use @logtail/pino, but
-//-------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------
+// if you need setup default level logging, you can use 'process.env.PINO_LOG_LEVEL'. 'info' - from dev, 'warn' - from prod.
+// #redact - array from hidden field in object.
+// if you need desktop log we can use @logtail/pino, but you need network.
+//--------------------------------------------------------------------------------------------------------------------------
 import { pino } from "pino";
 import __dirname from "./dirname.js";
 
@@ -42,7 +42,7 @@ class logger {
 		"*.user.passport",
 		"user.phone",
 		"*.user.phone",
-	];
+	]; // This is example. Fix it
 	#pinoSettings = {
 		level: this.#level,
 		timestamp: this.#timestamp,
